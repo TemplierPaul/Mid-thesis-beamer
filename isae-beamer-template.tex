@@ -8,7 +8,7 @@
 \usepackage[english]{babel}
 \usepackage{palatino}
 \usepackage{graphicx}
-\graphicspath{{./images/}}
+\graphicspath{{./images/misc/}}
 \usepackage{colortbl}
 \usepackage{xcolor}
 \usepackage{tikz}
@@ -29,48 +29,12 @@
 \usepackage{eurosym}
 \usepackage{wasysym}
 
+\include{macros}
+
+
 % Printing on 2 slides per page
 %\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 
-% My macros...
-\newcommand*{\SET}[1]  {\ensuremath{\boldsymbol{#1}}}
-\newcommand*{\VEC}[1]  {\ensuremath{\boldsymbol{#1}}}
-\newcommand*{\MAT}[1]  {\ensuremath{\boldsymbol{#1}}}
-\newcommand*{\OP}[1]  {\ensuremath{\text{#1}}}
-\newcommand*{\NORM}[1]  {\ensuremath{\left\|#1\right\|}}
-\newcommand*{\DPR}[2]  {\ensuremath{\left \langle #1,#2 \right \rangle}}
-\newcommand*{\calbf}[1]  {\ensuremath{\boldsymbol{\mathcal{#1}}}}
-\newcommand*{\shift}[1]  {\ensuremath{\boldsymbol{#1}}}
-\newcommand{\eqdef}{\stackrel{\mathrm{def}}{=}}
-\newcommand{\argmax}{\operatornamewithlimits{argmax}}
-\newcommand{\argmin}{\operatornamewithlimits{argmin}}
-\newcommand{\ud}{\, \text{d}}
-\newcommand{\vect}{\text{Vect}}
-\newcommand{\sinc}{\text{sinc}}
-\newcommand{\esp}{\ensuremath{\mathbb{E}}}
-\newcommand{\hilbert}{\ensuremath{\mathcal{H}}}
-\newcommand{\fourier}{\ensuremath{\mathcal{F}}}
-\newcommand{\sgn}{\text{sgn}}
-\newcommand{\intTT}{\int_{-T}^{T}}
-\newcommand{\intT}{\int_{-\frac{T}{2}}^{\frac{T}{2}}}
-\newcommand{\intinf}{\int_{-\infty}^{+\infty}}
-\newcommand{\Sh}{\ensuremath{\boldsymbol{S}}}
-\newcommand{\Cpx}{\ensuremath{\mathbb{C}}}
-\newcommand{\R}{\ensuremath{\mathbb{R}}}
-\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
-\newcommand{\N}{\ensuremath{\mathbb{N}}}
-\newcommand{\K}{\ensuremath{\mathbb{K}}}
-\newcommand{\reel}{\mathcal{R}}
-\newcommand{\imag}{\mathcal{I}}
-\newcommand{\cmnr}{c_{m,n}^\reel}
-\newcommand{\cmni}{c_{m,n}^\imag}
-\newcommand{\cnr}{c_{n}^\reel}
-\newcommand{\cni}{c_{n}^\imag}
-\newcommand{\LR}{\mathcal{L}_2(\R)}
-\newcommand{\tproto}{g}
-\newcommand{\rproto}{\check{g}}
-\newcommand{\Tproto}{G}
-\newcommand{\Rproto}{\check{G}}
 
 %\theoremstyle{definition}
 %\newtheorem{definition}{Définition}[subsection]
@@ -94,24 +58,25 @@
 \addtobeamertemplate{frametitle}{}{%
 \vskip-1em
 \begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north east,yshift=4pt] at (current page.north east) {\includegraphics[height=0.8cm]{images/logo-isae-long-sans-texte}};
+\node[anchor=north east,yshift=4pt] at (current page.north east) {\includegraphics[height=0.8cm]{images/misc/logo-isae-long-sans-texte}};
 \end{tikzpicture}}
 
-\title[Titre court]{Titre long de la présentation}
+\title[Mid-thesis defense]{Evolution Strategies for Neural Policy Search}
 
-\author[P. Nom et J. Doe]{\small Prénom Nom\inst{1} \and John Doe\inst{2}}
+% \author[P. Templier]{\small Paul Templier\inst{1}}
+\author[P. Templier]{\small Paul Templier}
 
-%\date{23 janvier 2014}
+\date{June 29, 2022}
 
-\institute[ISAE/DEOS]
+\institute[ISAE/DISC]
 {
 \vspace{0.5cm}
 \begin{minipage}{0.5\linewidth}
   \begin{center}
-    \inst{1} ISAE Supaero, Département Electronique, Optronique, Signal (DEOS)\\
-    \inst{2} ISAE Supaero, Département Mathématiques, Informatique, Automatique (DMIA)\\
+    % \inst{1} 
+    ISAE Supaero, Département Ingéniérie des Systèmes Complexes (DISC)\\
     \vspace{1em}
-    \includegraphics[height=2.5cm]{images/logo-isae-long}
+    \includegraphics[height=2.5cm]{images/misc/logo-isae-long}
   \end{center}
 \end{minipage}
 }
@@ -140,68 +105,80 @@
 \begin{frame}
   \frametitle{Plan}
   \small
-  %\tableofcontents[hideothersubsections]
+  \tableofcontents[hideothersubsections]
   %\tableofcontents[currentsubsection,hideothersubsections]
-  \tableofcontents[currentsubsection]
+  % \tableofcontents[currentsubsection]
   \normalsize
 \end{frame}
 }
 
-\section{Première partie}
-\label{sec:partie1}
+\include{slides/0-intro.tex}
+\include{slides/2-policy_search.tex}
+\include{slides/3-berl.tex}
+\include{slides/4-gene.tex}
+\include{slides/5-stochastic.tex}
+\include{slides/6-dqnes.tex}
+\include{slides/7-conclusion.tex}
+\include{slides/8-fw.tex}
+% \section{Première partie}
+% \label{sec:partie1}
 
-\begin{frame}
-  \frametitle{Introduction}
-  Voici un exemple.
-  \begin{block}{Un exemple de bloc}
-    Avec son contenu.
-  \end{block}
-  Une équation :
-  \begin{equation}
-    \label{eq:tranformee-fourier}
-    S(f) = \intinf s(t) e^{-j2\pi f t} \ud t.
-  \end{equation}
-\end{frame}
+% \begin{frame}
+%   \frametitle{Introduction}
+%   Voici un exemple.
+%   \begin{block}{Un exemple de bloc}
+%     Avec son contenu.
+%   \end{block}
+%   Une équation :
+%   \begin{equation}
+%     \label{eq:tranformee-fourier}
+%     S(f) = \intinf s(t) e^{-j2\pi f t} \ud t.
+%   \end{equation}
+% \end{frame}
 
-\section{Deuxième partie}
-\label{sec:partie2}
+% \section{Deuxième partie}
+% \label{sec:partie2}
 
-\begin{frame}[fragile]
-  \frametitle{Un exemple avec deux colonnes}
-  \begin{columns}
-    \begin{column}{0.45\linewidth}
-      Bla bla bla bla bla bla
-      Une image
-      \begin{center}
-        \includegraphics[width=3cm]{images/logo-isae-court}
-      \end{center}
-    \end{column}
-    \begin{column}{0.45\linewidth}
-      Du code source
-\begin{verbatim}
-cd /home/user
-make && make install
-\end{verbatim}
-      Une citation : \cite{Roque2012}.
-    \end{column}
-  \end{columns}
-\end{frame}
+% \begin{frame}[fragile]
+%   \frametitle{Un exemple avec deux colonnes}
+%   \begin{columns}
+%     \begin{column}{0.45\linewidth}
+%       Bla bla bla bla bla bla
+%       Une image
+%       \begin{center}
+%         \includegraphics[width=3cm]{images/misc/logo-isae-court}
+%       \end{center}
+%     \end{column}
+%     \begin{column}{0.45\linewidth}
+%       Du code source
+% \begin{verbatim}
+% cd /home/user
+% make && make install
+% \end{verbatim}
+%       Une citation : \cite{Roque2012}.
+%     \end{column}
+%   \end{columns}
+% \end{frame}
 
 
-\begin{frame}
-  \frametitle{Questions}
-  \begin{center}
-    Merci pour votre attention.
+% \begin{frame}
+%   \frametitle{Questions}
+%   \begin{center}
+%     Merci pour votre attention.
 
-    Avez-vous des questions ?
-  \end{center}
-\end{frame}
+%     Avez-vous des questions ?
+%   \end{center}
+% \end{frame}
 
 \newcounter{lastframe}
 \setcounter{lastframe}{\insertframenumber}
 
+\include{slides/9-appendix.tex}
+
 \begin{frame}[allowframebreaks]{References}
-\bibliographystyle{authoryear-fr}
+% \bibliographystyle{authoryear-fr}
+% \bibliography{references}
+\bibliographystyle{abbrv}
 \bibliography{references}
 \end{frame}
 

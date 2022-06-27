@@ -1,0 +1,153 @@
+\documentclass[usenames,dvipsnames,aspectratio=169]{beamer}
+
+%& PACKAGES
+\usepackage[export]{adjustbox}
+\usepackage{algorithm}
+%\usepackage[noend]{algorithmic}
+%\usepackage[algo2e,vlined,ruled]{algorithm2e}
+\usepackage{array}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+%\usepackage[backend=bibtex,style=authoryear]{biblatex}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8x]{inputenc} % Xetex
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{textpos}
+\usepackage{tikz}
+\usepackage{tikzsymbols}
+\usepackage{xcolor}
+
+\usetikzlibrary{shapes,fit,arrows,backgrounds,positioning,fadings,shadows,intersections, pgfplots.fillbetween,shapes.misc,automata}
+
+%\usepackage{environ}
+%\usepackage{breqn}
+%\usepackage{tcolorbox}
+%\usepackage{wasysym}
+%\usepackage{transparent}
+%\usepackage{relsize}
+%\usepackage{appendixnumberbeamer}
+%\usepackage[absolute,overlay]{textpos}
+%\usepackage{setspace}
+%\usepackage{makecell}
+%\usepackage{wrapfig}
+
+\hypersetup{
+	colorlinks=false,
+	urlcolor=cyan,
+	citecolor=black
+}
+
+
+%& BEAMER SETTINGS
+\usetheme{default}
+\usecolortheme{seagull}
+\setbeamertemplate{blocks}[rounded]% Rounded blocks
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]{} % frame number
+%\setbeamertemplate{footline}{} % no frame number
+
+%& BIB AND MACROS SOURCES
+%\addbibresource{../icgp-bib.bib}
+\include{macros}
+
+%& TITLES
+\newcommand{\ti}{{$[$Context$]$}}
+\newcommand{\tii}{{$[$Policy search$]$}}
+\newcommand{\tiii}{{$[$GENE$]$}}
+\newcommand{\tiv}{{$[$Search direction$]$}}
+\newcommand{\tv}{{$[$Noisy fitness$]$}}
+\newcommand{\tvi}{{$[$Directions$]$}}
+
+\newcommand{\tei}{Context of this PhD}
+\newcommand{\teii}{Evolution Strategies for Policy Search}
+\newcommand{\teiii}{Representing policies and changing the search space}
+\newcommand{\teiv}{Using samples to help the search}
+\newcommand{\tev}{Adapting to stochastic problems}
+\newcommand{\tevi}{Future work and timeline}
+
+\newcommand{\tci}{{\color{teal} \ti{}}}
+\newcommand{\tcii}{{\color{magenta} \tii{}}}
+\newcommand{\tciii}{{\color{cyan} \tiii{}}}
+\newcommand{\tciv}{{\color{ForestGreen} \tiv{}}}
+\newcommand{\tcv}{{\color{orange} \tv{}}}
+\newcommand{\tcvi}{{\color{Dandelion} \tvi{}}}
+
+\newcommand{\es}{Evolution Strategies}
+% \newcommand{\es}{\color{magenta} Evolution Strategies}
+\newcommand{\gene}{GENE}
+\newcommand{\dqnes}{DQNES}
+% \newcommand{\dqnes}{\color{ForestGreen} DQNES}
+\newcommand{\lucie}{\texttt{LUCIE}}
+% \newcommand{\lucie}{\color{orange} \texttt{LUCIE}}
+\newcommand{\fw}{Future Work}
+% \newcommand{\fw}{\color{yellow} Future Work}
+
+
+
+%& FONT
+%\usefonttheme{serif}
+%\setbeamerfont{normal text}{family=\rmfamily, size=\normalsize}
+%\setbeamerfont{block body}{family=\rmfamily, size=\normalsize}
+%\setbeamerfont{frametitle}{size=\Large} % default is \Large
+\newcommand{\btVFill}{\vskip0pt plus 1filll}
+
+%& multirows table cell
+\newcommand{\cspecialcell}[2][c]{\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+\newcommand{\lspecialcell}[2][l]{\begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+%& META-DATA
+\title[Mid-thesis defense]{Evolution Strategies for Neural Policy Search}
+\subtitle[]{Mid-thesis commitee}
+\author{ 
+	\textit{Author:} Paul Templier\textsuperscript{1} \\
+	\textit{Advisors:} Emmanuel Rachelson\textsuperscript{1},
+	Dennis G. Wilson\textsuperscript{1}\\
+	\vspace{1em}
+	\texttt{[paul.templier@isae-supaero.fr]}\\
+	\vspace{1em}
+	June 29, 2022\\
+	\vspace{2em}
+	\tiny \textsuperscript{1} University of Toulouse, ISAE-SUPAERO	
+}
+\date{June 29, 2022}
+
+\begin{document}
+	
+	\begin{frame}[plain,noframenumbering]{}%
+		\begin{textblock*}{2cm}(-0.8cm,0cm) % {block width} (coords)
+			\includegraphics[width=\textwidth]{images/misc/logo-isae-long.png}
+		\end{textblock*}
+		\vspace{2em}
+		\titlepage
+		\vspace{-6em}
+	\end{frame}
+
+	\include{slides/0-intro.tex}
+	\include{slides/2-policy_search.tex}
+	% \include{slides/3-berl.tex}
+	\include{slides/4-gene.tex}
+	\include{slides/6-dqnes.tex}
+	\include{slides/5-stochastic.tex}
+	% \include{slides/7-conclusion.tex}
+	\include{slides/8-fw.tex}
+	
+	\begin{frame}[allowframebreaks]{References}
+		% \bibliographystyle{authoryear-fr}
+		% \bibliography{references}
+		\bibliographystyle{abbrv}
+		\bibliography{references}
+	\end{frame}
+	
+	\newcounter{lastframe}
+	\setcounter{lastframe}{\insertframenumber}
+
+	\include{slides/9-appendix.tex}
+	
+	\setcounter{framenumber}{\thelastframe}
+
+\end{document}

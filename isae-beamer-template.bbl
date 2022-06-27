@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{chrabaszczBackBasicsBenchmarking2018}
+P.~Chrabaszcz, I.~Loshchilov, and F.~Hutter.
+\newblock Back to {{Basics}}: {{Benchmarking Canonical Evolution Strategies}}
+  for {{Playing Atari}}.
+\newblock pages 1419--1426, 2018.
+
+\bibitem{salimansEvolutionStrategiesScalable2017}
+T.~Salimans, J.~Ho, X.~Chen, S.~Sidor, and I.~Sutskever.
+\newblock Evolution {{Strategies}} as a {{Scalable Alternative}} to
+  {{Reinforcement Learning}}.
+\newblock Mar. 2017.
+
+\end{thebibliography}

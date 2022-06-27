@@ -1,0 +1,264 @@
+% Utils
+% \newcommand{\todo}[1]{\textcolor{red}{\MakeUppercase{#1}}\\}
+\newcommand{\tocite}[1]{ \textcolor{red}{[#1]} } 
+\newcommand{\addlink}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+\def\code#1{\texttt{#1}}
+
+\newcommand{\censor}[1]{#1}
+
+% Standard algos
+\newcommand{\neat}{NEAT}
+\newcommand{\hyperneat}{HyperNEAT}
+% \newcommand{\es}{evolution strategies}
+\newcommand{\snes}{SNES}
+\newcommand{\xnes}{XNES}
+\newcommand{\enes}{eNES} 
+\newcommand{\cmaes}{CMA-ES}
+\newcommand{\sepcmaes}{sep-CMA-ES}
+\newcommand{\openaies}{OpenAI ES}
+\newcommand{\canonical}{Canonical ES}
+\newcommand{\direct}{direct encoding}
+\newcommand{\ars}{Augmented Random Search}
+
+
+% My algos
+%% GENE
+% \newcommand{\gene}{GENE}
+\newcommand{\coordsnet}{GENE}
+\newcommand{\xdgene}{XD-GENE}
+\newcommand{\ltwogene}{L2-GENE}
+\newcommand{\grngene}{tag-GENE}
+\newcommand{\pltwogene}{pL2-GENE}
+\newcommand{\coordinates}{\textit{coordinates}}
+\newcommand{\distfunc}{\textit{distance function}}
+
+%% ES
+% \newcommand{\dqnes}{DQNES}
+\newcommand{\elitES}{ElitES}
+% \newcommand{\mujoco}{\textsc{MuJoCo}}
+\newcommand{\customes}{Custom ES}
+
+\newcommand{\berl}{\code{BERL}}
+\newcommand{\cambrian}{\code{Cambrian.jl} }
+
+% Papers
+\newcommand{\openaipaper}{\cite{salimansEvolutionStrategiesScalable2017}}
+\newcommand{\canonicalpaper}{\cite{chrabaszczBackBasicsBenchmarking2018} }
+\newcommand{\nespaper}{\cite{wierstraNaturalEvolutionStrategies2014}}
+\newcommand{\aleguidelines}{\cite{machadoRevisitingArcadeLearning2017}}
+
+
+
+%%% Text
+\newcommand{\ie}{\emph{i.e.}}
+\newcommand{\eg}{\emph{e.g.}}
+\newcommand{\wrt}{\emph{w.r.t.}}
+\newcommand{\etc}{\emph{e.t.c.}}
+\newcommand{\onemax}{\textsc{OneMax}}
+\newcommand{\leadingones}{\textsc{LeadingOnes}}
+\newcommand{\procgen}{\textsc{ProcGen}}
+\newcommand{\cartpole}{\textsc{CartPole}}
+\newcommand{\acrobot}{\textsc{Acrobot}}
+\newcommand{\pendulum}{\textsc{Pendulum}}
+\newcommand{\mujoco}{\textsc{MuJoCo}}
+\newcommand{\qm}[1]{``#1''}
+% \newcommand{\note}[1]{{\color{blue}#1}}
+\newcommand{\honemax}{H2}
+\newcommand{\hleadingones}{H5}
+\newcommand{\red}[1]{{\color{red}#1}}
+% \newcommand{\lucie}{{\color{magenta}\texttt{LUCIE}}}
+
+%%% Common Maths
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\lnof}[1]{\ensuremath{\ln\left(#1\right)}}
+\newcommand{\expof}[1]{\ensuremath{\exp\left(#1\right)}}
+\newcommand{\powerof}[2]{\ensuremath{\left(#1\right)^{#2}}}
+\newcommand{\set}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\expect}{\ensuremath{\mathbb{E}}}
+\newcommand{\expectof}[1]{\ensuremath{\expect{}\left(#1\right)}}
+\newcommand{\proba}{\ensuremath{\mathbb{P}}}
+\newcommand{\probaof}[1]{\ensuremath{\proba{}\left(#1\right)}}
+\newcommand{\probaofgiven}[2]{\ensuremath{\proba{}\left(#1\;\middle|\;#2\right)}}
+\newcommand{\union}[2]{\ensuremath{\bigcup\limits_{#1}^{#2}}}
+\newcommand{\sumc}[2]{\ensuremath{\sum_{#1}^{#2}}} % condensed notation for sum
+\newcommand{\intc}[2]{\ensuremath{\int_{#1}^{#2}}} % condensed notation for integral
+\newcommand{\indic}[1]{\ensuremath{\boldsymbol{1}\left(#1\right)}} % indicatrice
+%\newcommand{\intrange}[2]{\ensuremath{\left[#1,#2\right]}}
+\newcommand{\intrange}[2]{\ensuremath{\left\{#1,\dots,#2\right\}}}
+\newcommand{\eqdef}{\ensuremath{\stackrel{\text{def}}{=}}}
+\newcommand{\bigo}{\ensuremath{\mathcal{O}}}
+\newcommand{\bigoof}[1]{\ensuremath{\bigo{}\left(#1\right)}}
+% \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+% \DeclareMathOperator\erf{erf}
+% \DeclareMathOperator*{\argmax}{arg\,max}
+% \DeclareMathOperator*{\argmin}{arg\,min}
+
+%%% Our Maths
+
+% Constants
+\newcommand{\csta}{\ensuremath{4}}
+\newcommand{\cstatimestwo}{\ensuremath{8}}
+\newcommand{\cstaminusone}{\ensuremath{3}}
+\newcommand{\cstaminustwo}{\ensuremath{2}}
+\newcommand{\cstb}{\ensuremath{2}}
+\newcommand{\cst}[1]{\ensuremath{C_{#1}}}
+\newcommand{\gammamax}{\ensuremath{0.57}}
+\newcommand{\cstlemmathree}{\ensuremath{\tilde{C}}}
+\newcommand{\npopmin}{\ensuremath{2}} % min total population size
+\newcommand{\tmin}{\ensuremath{2}} % min number of steps
+\newcommand{\deltamax}{\ensuremath{0.5}} % max value of delta
+
+\newcommand{\npop}{\ensuremath{n}} % total population size
+\newcommand{\nresampling}{\ensuremath{n_{\text{RS}}}}
+\newcommand{\scalingfactor}{\ensuremath{\alpha}}
+\newcommand{\nbits}{\ensuremath{N}} % Number of bits in OneMax and LeadingOnes
+\newcommand{\budget}{\ensuremath{B}} % Max number of eval per generation for LUCBEA
+\newcommand{\samplingstrategy}{\ensuremath{\mathcal{S}}}
+\newcommand{\pbcomplexity}[2]{\ensuremath{H^{#1,#2}}}% pb complexity at gen #1 with factor #2
+\newcommand{\meansymbol}[1]{\ensuremath{f}} % mean symbol
+\newcommand{\mean}[1]{\ensuremath{\meansymbol{}_{#1}}}% mean of ind #1
+\newcommand{\empiricalmean}[3]{\ensuremath{\hat{\meansymbol{}}_{#1}^{#2,#3}}}% empirical mean of ind #1 at gen #2 at time #3
+\newcommand{\ttotal}{\ensuremath{N_{\text{non-term}}}}% total number of steps
+\newcommand{\tremain}{\ensuremath{N_{\text{remain}}}}% number of remaining steps
+\newcommand{\samplessymbol}{\ensuremath{u}}
+%\newcommand{\samplesgensymbol}{\ensuremath{v}}
+\newcommand{\nones}[1]{\ensuremath{D^{#1}}}% number of ones at generation #1
+\newcommand{\opt}{\ensuremath{\text{opt}}}
+\newcommand{\pes}{\ensuremath{\text{pes}}}
+\newcommand{\xpesrv}[1]{\ensuremath{X^{\pes{}}_{#1}}}% rv X pessimal in leadingones with #1 leading ones
+\newcommand{\xoptrv}[1]{\ensuremath{X^{\opt{}}_{#1}}}% rv X optimal in leadingones with #1 leading ones
+\newcommand{\xpes}[1]{\ensuremath{x^{\pes{}}_{#1}}}% X pessimal in leadingones with #1 leading ones
+\newcommand{\xopt}[1]{\ensuremath{x^{\opt{}}_{#1}}}% X optimal in leadingones with #1 leading ones
+\newcommand{\observationsymbol}[1]{\ensuremath{O}}
+\newcommand{\observationof}[1]{\ensuremath{\observationsymbol{}\left(#1\right)}}% observation of an ind #1 fitness
+\newcommand{\nsamples}[3]{\ensuremath{\samplessymbol{}_{#1}^{#2,#3}}}% TOTAL number of samples of ind #1 at gen #2 at time #3
+%\newcommand{\nsamplesgen}[3]{\ensuremath{\samplesgensymbol{}_{#1}^{#2,#3}}}% number of samples of ind #1 collected during gen #2 at step #3
+\newcommand{\nsamplesstar}[3]{\ensuremath{\samplessymbol{}_{#1}^{*}(#3)}}% TOTAL number of samples of ind #1 at gen #2 at step #3 for bound to be lesser than max(delta_ind, epsilon/2)
+%\newcommand{\nsamplesstargen}[3]{\ensuremath{\samplesgensymbol{}_{#1}^{*}(#2,#3)}}% number of samples of ind #1 collected during step #2 at time #3 for bound to be lesser than max(delta_ind, epsilon/2)
+\newcommand{\nsamplesinit}[2]{\ensuremath{U_{#1}^{#2}}}% initial number of samples of ind #1 at gen #2
+\newcommand{\nsamplesinitmax}[1]{\ensuremath{U^{#1}}}% max initial number of samples of gen #1
+\newcommand{\boundsymbol}{\ensuremath{\beta}}
+\newcommand{\bound}[3]{\ensuremath{\boundsymbol{}\left(#1,#3\right)}}% bound after #1 samples at step #3 of ind #2
+\newcommand{\boundbarsymbol}{\ensuremath{\bar{\beta}}}
+\newcommand{\boundbar}[3]{\ensuremath{\boundbarsymbol{}\left(#1,#3\right)}}% bound after #1 samples at step #3 of ind #2
+\newcommand{\hucb}[2]{\ensuremath{h_{*}^{#1,#2}}} % highest UCB at gen #1 step #2
+\newcommand{\llcb}[2]{\ensuremath{l_{*}^{#1,#2}}} % lowest LCB at gen #1 step #2
+\newcommand{\hucbshort}[2]{\ensuremath{h^{#2}}}
+\newcommand{\llcbshort}[2]{\ensuremath{l^{#2}}}
+\newcommand{\maxc}[2]{\ensuremath{\left[#1\wedge#2\right]}} % condensed notation for max
+
+% Sets
+\newcommand{\individuals}[1]{\ensuremath{\textsc{Ind}^{#1}}} % Set of individuals of gen g
+\newcommand{\topset}[1]{\ensuremath{\textsc{Top}^{#1}}} % top mu individuals of gen g
+\newcommand{\botset}[1]{\ensuremath{\textsc{Bot}^{#1}}} % non-top mu individuals of gen g
+\newcommand{\goodset}[1]{\ensuremath{\textsc{Good}^{#1}}} % epsilon-mu-optimal individuals of gen g
+\newcommand{\badset}[1]{\ensuremath{\textsc{Bad}^{#1}}} % non-epsilon-mu-optimal individuals of gen g
+\newcommand{\highset}[2]{\ensuremath{\textsc{High}^{#1,#2}}} % estimated top mu individuals at step t of gen g
+\newcommand{\lowset}[2]{\ensuremath{\textsc{Low}^{#1,#2}}} % estimated non-top mu individuals at step t of gen g
+\newcommand{\aboveset}[2]{\ensuremath{\textsc{Above}^{#1,#2}}} % middle at step t of gen g
+\newcommand{\middleset}[2]{\ensuremath{\textsc{Middle}^{#1,#2}}} % middle at step t of gen g
+\newcommand{\belowset}[2]{\ensuremath{\textsc{Below}^{#1,#2}}} % middle at step t of gen g
+
+% Events
+\newcommand{\failgen}[1]{\ensuremath{F^{#1}}}% fail gen #1
+\newcommand{\failgenstep}[2]{\ensuremath{F^{#1}_{#2}}}% fail gen #1 step #2
+\newcommand{\cross}[2]{\ensuremath{\textsc{Cross}^{#1,#2}}}
+\newcommand{\crossind}[3]{\ensuremath{\textsc{Cross}_{#1}^{#2,#3}}}
+\newcommand{\needy}[3]{\ensuremath{\textsc{Needy}_{#1}^{#2,#3}}}
+\newcommand{\terminate}[2]{\ensuremath{\textsc{Term}^{#1,#2}}}
+
+
+% My macros...
+\newcommand*{\SET}[1]  {\ensuremath{\boldsymbol{#1}}}
+\newcommand*{\VEC}[1]  {\ensuremath{\boldsymbol{#1}}}
+\newcommand*{\MAT}[1]  {\ensuremath{\boldsymbol{#1}}}
+\newcommand*{\OP}[1]  {\ensuremath{\text{#1}}}
+\newcommand*{\NORM}[1]  {\ensuremath{\left\|#1\right\|}}
+\newcommand*{\DPR}[2]  {\ensuremath{\left \langle #1,#2 \right \rangle}}
+\newcommand*{\calbf}[1]  {\ensuremath{\boldsymbol{\mathcal{#1}}}}
+\newcommand*{\shift}[1]  {\ensuremath{\boldsymbol{#1}}}
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\newcommand{\ud}{\, \text{d}}
+\newcommand{\vect}{\text{Vect}}
+\newcommand{\sinc}{\text{sinc}}
+\newcommand{\esp}{\ensuremath{\mathbb{E}}}
+\newcommand{\hilbert}{\ensuremath{\mathcal{H}}}
+\newcommand{\fourier}{\ensuremath{\mathcal{F}}}
+\newcommand{\sgn}{\text{sgn}}
+\newcommand{\intTT}{\int_{-T}^{T}}
+\newcommand{\intT}{\int_{-\frac{T}{2}}^{\frac{T}{2}}}
+\newcommand{\intinf}{\int_{-\infty}^{+\infty}}
+\newcommand{\Sh}{\ensuremath{\boldsymbol{S}}}
+\newcommand{\Cpx}{\ensuremath{\mathbb{C}}}
+\newcommand{\K}{\ensuremath{\mathbb{K}}}
+\newcommand{\reel}{\mathcal{R}}
+\newcommand{\imag}{\mathcal{I}}
+\newcommand{\cmnr}{c_{m,n}^\reel}
+\newcommand{\cmni}{c_{m,n}^\imag}
+\newcommand{\cnr}{c_{n}^\reel}
+\newcommand{\cni}{c_{n}^\imag}
+\newcommand{\LR}{\mathcal{L}_2(\R)}
+\newcommand{\tproto}{g}
+\newcommand{\rproto}{\check{g}}
+\newcommand{\Tproto}{G}
+\newcommand{\Rproto}{\check{G}}
+
+%%% TIKZ
+
+% fitness function
+%\newcommand{\fit}[1]{{3+sin(54*#1-40)-0.2*#1}}
+\newcommand{\fit}[1]{{2-0.1*#1+2.5*exp(-0.3*(#1-3)^2)+1.5*exp(-0.5*(#1-7)^2)}}
+
+% plot a generation of indiv + their fitness
+\newcommand{\plotgenf}[4]{% x color in-slide out-slide
+\foreach \x in {#1}{%
+	\onslide<#3-#4>{\node[ind,fill=#2] at (\x,0){};}
+	\onslide<#4-#4>{\node[ind,fill=#2] at (\x,\fit{\x}){};}
+}
+}
+
+% plot a generation of indiv + their fitness
+\newcommand{\plotgen}[4]{% coord color in-slide out-slide
+\foreach \x/\y in {#1}{%
+	\onslide<#3-#4>{\node[ind,fill=#2] at (\x,0){};}
+	\onslide<#4-#4>{\node[ind,fill=#2] at (\x,\y){};}
+}
+}
+
+% plot a generation but only fitness
+\newcommand{\plotgenonlyeval}[4]{% coord color in-slide out-slide
+\foreach \x/\y in {#1}{%
+	\onslide<#4-#4>{\node[ind,fill=#2] at (\x,\y){};}
+}
+}
+
+% plot a one indiv and many eval
+\newcommand{\plotgenmanyeval}[5]{% x ys color in-slide out-slide
+	\onslide<#4-#5>{\node[ind,fill=#3] at (#1,0){};}
+	\foreach \y in {#2}{%
+		\onslide<#4-#5>{\node[ind,fill=#3] at (#1,\y){};}
+	}
+}
+
+\newcommand{\squarebracket}[6]{% x y width color sidesize thickness
+	\draw[color=#4, #6] (#1-#3,#2+#5) -- (#1-#3,#2) -- (#1+#3,#2) -- (#1+#3,#2+#5);
+}
+
+\newcommand{\roundbracket}[7]{% x y width color sidesize thickness rotate
+	\begin{scope}[shift={(#1,#2)},rotate=#7]%
+		\draw[color=#4,#6] (-#3+#5,0) -- (#3-#5,0);%
+		\draw[color=#4,#6] (-#3,+#5) arc (0:90:-#5);%
+		\draw[color=#4,#6] (#3,+#5) arc (0:-90:#5);%
+	\end{scope}%
+}
+
+\def\bw{0.1} % confidence intervals width
+\newcommand{\cifit}[4]{% x y beta color
+	\draw[ultra thick, color=#4] (#1,#2-#3) -- (#1,#2+#3);
+	\draw[ultra thick, color=#4] (#1-\bw,#2-#3) -- (#1+\bw,#2-#3);
+	\draw[ultra thick, color=#4] (#1-\bw,#2+#3) -- (#1+\bw,#2+#3);
+	\node[circle, draw=none, minimum width=0.2cm, inner sep=0, outer sep=0, fill=white, color=#4] at (#1,#2) {};
+}

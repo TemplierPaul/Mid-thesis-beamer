@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{chrabaszczBackBasicsBenchmarking2018}
+P.~Chrabaszcz, I.~Loshchilov, and F.~Hutter.
+\newblock Back to {{Basics}}: {{Benchmarking Canonical Evolution Strategies}}
+  for {{Playing Atari}}.
+\newblock pages 1419--1426, 2018.
+
+\bibitem{lecarpentierLUCIEEvaluationSelection2022}
+E.~Lecarpentier, P.~Templier, E.~Rachelson, and D.~G. Wilson.
+\newblock {{LUCIE}}: {{An Evaluation}} and {{Selection Method}} for
+  {{Stochastic Problems}}.
+\newblock In {\em Proceedings of the {{Genetic}} and {{Evolutionary Computation
+  Conference}} ({{GECCO}} 2022)}, 2022.
+
+\bibitem{mnihHumanlevelControlDeep2015}
+V.~Mnih, K.~Kavukcuoglu, D.~Silver, A.~A. Rusu, J.~Veness, M.~G. Bellemare,
+  A.~Graves, M.~Riedmiller, A.~K. Fidjeland, G.~Ostrovski, et~al.
+\newblock Human-level control through deep reinforcement learning.
+\newblock {\em nature}, 518(7540):529--533, 2015.
+
+\bibitem{salimansEvolutionStrategiesScalable2017}
+T.~Salimans, J.~Ho, X.~Chen, S.~Sidor, and I.~Sutskever.
+\newblock Evolution {{Strategies}} as a {{Scalable Alternative}} to
+  {{Reinforcement Learning}}.
+\newblock Mar. 2017.
+
+\end{thebibliography}
