@@ -33,7 +33,7 @@
 \begin{frame}{\tcv{} The \lucie{} selection procedure}%
     \vspace{1em}
     \onslide<2->{%
-        \textbf{Objective:} identify the {\color<2>{cyan}\textbf{best $\mu$}} individuals with as {\color<2>{magenta}\textbf{few evaluations}} as possible. \cite{lecarpentierLUCIEEvaluationSelection2022}
+        \textbf{Objective:} identify the {\color{cyan}\textbf{best $\mu$}} individuals with as {\color{magenta}\textbf{few evaluations}} as possible. \cite{lecarpentierLUCIEEvaluationSelection2022}
     }
     \vspace{1em}
     \begin{figure}
@@ -53,12 +53,12 @@
                 \node[] at (\xmax-1.1,-0.4) {\textsc{Individuals}};
             }
             % individuals
-            \onslide<4->{%
+            \onslide<3->{%
                 \foreach \x in {1,2,3,4,5}{%
                     \node[ball,fill=black,opacity=1.0] at (\x*\dx,0){};
                 }
             }
-            \onslide<5>{%
+            \onslide<3>{%
                 % mean
                 \node[] (i1mean) at (1*\dx,2.5) {};
                 \node[red] (mean) at (5,4) {\textbf{Empirical mean:} $\hat{f} = \frac{1}{u} \sumc{k=1}{u} y_k$};
@@ -70,55 +70,55 @@
                 \roundbracket{0.2+1*\dx}{2.0}{0.45}{red}{0.08}{}{90}% x y width color sidesize thickness rotate
             }
             % t=1 fitnesses
-            \onslide<5-7>{%
-                \only<5>{%
+            \onslide<3>{%
+                % \only<5>{%
                     \cifit{1*\dx}{2.5}{1}{black} % x y beta color
                     \cifit{2*\dx}{2.4}{1}{black}
                     \cifit{3*\dx}{2.3}{1}{black}
                     \cifit{4*\dx}{2.3}{1}{black}
                     \cifit{5*\dx}{2.1}{1}{black}
-                }
-                \only<6->{%
-                    \cifit{1*\dx}{2.5}{1}{\hicol} % x y beta color
-                    \cifit{2*\dx}{2.4}{1}{\hicol}
-                    \cifit{3*\dx}{2.3}{1}{\locol}
-                    \cifit{4*\dx}{2.3}{1}{\locol}
-                    \cifit{5*\dx}{2.1}{1}{\locol}
-                }
+                % }
+                % \only<6->{%
+                    % \cifit{1*\dx}{2.5}{1}{\hicol} % x y beta color
+                    % \cifit{2*\dx}{2.4}{1}{\hicol}
+                    % \cifit{3*\dx}{2.3}{1}{\locol}
+                    % \cifit{4*\dx}{2.3}{1}{\locol}
+                    % \cifit{5*\dx}{2.1}{1}{\locol}
+                % }
             }
             % high low sets
-            \onslide<6-8>{%
-                \node[] at (1.5*\dx,4) {\color{\hicol}\textsc{High}};
-                \node[] at (4.0*\dx,4) {\color{\locol}\textsc{Low}};
-                \roundbracket{1.5*\dx}{3.8}{0.6*\dx}{\hicol}{0.1}{}{180}
-                \roundbracket{4.0*\dx}{3.8}{1.1*\dx}{\locol}{0.1}{}{180}
-            }
+            % \onslide<4>{%
+            %     \node[] at (1.5*\dx,4) {\color{\hicol}\textsc{High}};
+            %     \node[] at (4.0*\dx,4) {\color{\locol}\textsc{Low}};
+            %     \roundbracket{1.5*\dx}{3.8}{0.6*\dx}{\hicol}{0.1}{}{180}
+            %     \roundbracket{4.0*\dx}{3.8}{1.1*\dx}{\locol}{0.1}{}{180}
+            % }
             % sampling candidates 1
-            \onslide<7>{%
-                \node[draw, rounded corners=0.1cm] (sc) at (2.5*\dx,-1) {Sampling candidates};
-                \draw[-stealth] (sc.north) to[out=90,in=-90] (2*\dx,-0.1);
-                \draw[-stealth] (sc.north) to[out=90,in=-90] (3*\dx,-0.1);
-                \node[ball,draw,dashed,thick,minimum width=0.5cm] at (2*\dx,1.4) {};
-                \node[ball,draw,dashed,thick,minimum width=0.5cm] at (3*\dx,3.3) {};
-            }
+            % \onslide<7>{%
+            %     \node[draw, rounded corners=0.1cm] (sc) at (2.5*\dx,-1) {Sampling candidates};
+            %     \draw[-stealth] (sc.north) to[out=90,in=-90] (2*\dx,-0.1);
+            %     \draw[-stealth] (sc.north) to[out=90,in=-90] (3*\dx,-0.1);
+            %     \node[ball,draw,dashed,thick,minimum width=0.5cm] at (2*\dx,1.4) {};
+            %     \node[ball,draw,dashed,thick,minimum width=0.5cm] at (3*\dx,3.3) {};
+            % }
             % t=2 fitnesses
-            \onslide<8>{%
-                \cifit{1*\dx}{2.5}{1}{\hicol} % x y beta color
-                \cifit{2*\dx}{2.4}{0.7}{\hicol}
-                \cifit{3*\dx}{2.3}{0.7}{\locol}
-                \cifit{4*\dx}{2.3}{1}{\locol}
-                \cifit{5*\dx}{2.1}{1}{\locol}
-            }
+            % \onslide<8>{%
+            %     \cifit{1*\dx}{2.5}{1}{\hicol} % x y beta color
+            %     \cifit{2*\dx}{2.4}{0.7}{\hicol}
+            %     \cifit{3*\dx}{2.3}{0.7}{\locol}
+            %     \cifit{4*\dx}{2.3}{1}{\locol}
+            %     \cifit{5*\dx}{2.1}{1}{\locol}
+            % }
             % sampling candidates 2
-            \onslide<8>{%
-                \node[draw, rounded corners=0.1cm] (sc) at (2.5*\dx,-1) {Sampling candidates};
-                \draw[-stealth] (sc.north) to[out=90,in=-90] (1*\dx,-0.1);
-                \draw[-stealth] (sc.north) to[out=90,in=-90] (4*\dx,-0.1);
-                \node[ball,draw,dashed,thick,minimum width=0.5cm] at (1*\dx,1.5) {};
-                \node[ball,draw,dashed,thick,minimum width=0.5cm] at (4*\dx,3.3) {};
-            }
+            % \onslide<8>{%
+            %     \node[draw, rounded corners=0.1cm] (sc) at (2.5*\dx,-1) {Sampling candidates};
+            %     \draw[-stealth] (sc.north) to[out=90,in=-90] (1*\dx,-0.1);
+            %     \draw[-stealth] (sc.north) to[out=90,in=-90] (4*\dx,-0.1);
+            %     \node[ball,draw,dashed,thick,minimum width=0.5cm] at (1*\dx,1.5) {};
+            %     \node[ball,draw,dashed,thick,minimum width=0.5cm] at (4*\dx,3.3) {};
+            % }
             % t=3 fitnesses + stop
-            \onslide<9->{%
+            \onslide<4>{%
                 % stop
                 \draw[thick, dashed] (2*\dx,2.3) -- (6*\dx,2.3);
                 \draw[thick, dashed] (3*\dx,2.5) -- (6*\dx,2.5);
