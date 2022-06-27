@@ -68,4 +68,46 @@
 \end{frame}
 
 
-    
+\begin{frame}{\tcv{} Classic Control}%
+        \def\figwidth{0.16\linewidth}%
+        \def\yleg{Fitness}%
+        \begin{textblock*}{2cm}(0cm,0.7cm) % {block width} (coords)
+            $\%$noise
+        \end{textblock*}
+        \begin{table}%[!t]
+            \centering
+            \begin{tabular}{ccccccc}
+                && $0\%$ & $200\%$ & $400\%$ & $600\%$ & $800\%$ \\
+                \raisebox{3\normalbaselineskip}[0pt][0pt]{\rotatebox[origin=c]{90}{\cartpole}} &
+                \raisebox{3\normalbaselineskip}[1cm][0cm]{\rotatebox[origin=c]{90}{\vspace{1cm}\yleg}}&
+                \includegraphics[width=\figwidth]{images/LUCIE/cartpole/boxplot_cartpole_0.png} &
+                \includegraphics[width=\figwidth]{images/LUCIE/cartpole/boxplot_cartpole_200.png} &
+                \includegraphics[width=\figwidth]{images/LUCIE/cartpole/boxplot_cartpole_400.png} &
+                \includegraphics[width=\figwidth]{images/LUCIE/cartpole/boxplot_cartpole_600.png} &
+                \includegraphics[width=\figwidth]{images/LUCIE/cartpole/boxplot_cartpole_800.png}\\
+            \end{tabular}
+%				\caption{Final validation fitness for \cartpole{} neuroevolution under posterior uniform noise.}
+%				\label{table:cartpole-uniform-eval-validation}
+        \end{table}
+
+        \vspace{-1em}
+
+        \def\figwidth{0.16\linewidth}
+        \def\yleg{Fitness}
+        \begin{table}[]
+            \centering
+            \begin{tabular}{ccccccc}
+%					&& 0\% & 200\% & 400\% & 600\% & 800\% \\
+                \raisebox{3.5\normalbaselineskip}[0pt][0pt]{\rotatebox[origin=c]{90}{\acrobot{}}} &
+                \raisebox{3.5\normalbaselineskip}[1cm][0cm]{\rotatebox[origin=c]{90}{\vspace{1cm}\yleg}}&
+                \includegraphics[width=\figwidth]{images/LUCIE/acrobot/boxplot_acrobot_0_u.png} &
+                \includegraphics[width=\figwidth]{images/LUCIE/acrobot/boxplot_acrobot_200_u.png} &
+                \includegraphics[width=\figwidth]{images/LUCIE/acrobot/boxplot_acrobot_400_u.png} &
+                \includegraphics[width=\figwidth]{images/LUCIE/acrobot/boxplot_acrobot_600_u.png} &
+                \includegraphics[width=\figwidth]{images/LUCIE/acrobot/boxplot_acrobot_800_u.png}\\
+            \end{tabular}
+%				\caption{Final validation fitness for Acrobot neuroevolution under posterior uniform noise.}
+%				\label{table:acrobot-uniform-eval-validation}
+        \end{table}
+
+\end{frame}
