@@ -3,6 +3,8 @@
 %& PACKAGES
 \usepackage[export]{adjustbox}
 \usepackage{algorithm}
+\usepackage{algorithmic}
+\newcommand{\algorithmautorefname}{Algorithm}
 %\usepackage[noend]{algorithmic}
 %\usepackage[algo2e,vlined,ruled]{algorithm2e}
 \usepackage{array}
@@ -21,7 +23,6 @@
 \usepackage{tikz}
 \usepackage{tikzsymbols}
 \usepackage{xcolor}
-
 \usetikzlibrary{shapes,fit,arrows,backgrounds,positioning,fadings,shadows,intersections, pgfplots.fillbetween,shapes.misc,automata}
 
 %\usepackage{environ}
@@ -117,6 +118,7 @@
 \date{June 29, 2022}
 
 \begin{document}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
 	
 	\begin{frame}[plain,noframenumbering]{}%
 		\begin{textblock*}{2cm}(-0.8cm,0cm) % {block width} (coords)
@@ -136,15 +138,15 @@
 	% \include{slides/7-conclusion.tex}
 	\include{slides/8-fw.tex}
 	
-	\begin{frame}[allowframebreaks]{References}
-		% \bibliographystyle{authoryear-fr}
-		% \bibliography{references}
-		\bibliographystyle{abbrv}
-		\bibliography{references}
-	\end{frame}
-	
 	\newcounter{lastframe}
 	\setcounter{lastframe}{\insertframenumber}
+	
+	\begin{frame}[allowframebreaks]{References}
+		% \bibliographystyle{authoryear-fr}
+		% \bibliographystyle{abbrv}
+		\bibliographystyle{apalike}
+		\bibliography{references}
+	\end{frame}
 
 	\include{slides/9-appendix.tex}
 	

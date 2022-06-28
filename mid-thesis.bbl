@@ -1,28 +1,44 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{}
 
-\bibitem{chrabaszczBackBasicsBenchmarking2018}
-P.~Chrabaszcz, I.~Loshchilov, and F.~Hutter.
+\bibitem[Chrabaszcz et~al., 2018]{chrabaszczBackBasicsBenchmarking2018}
+Chrabaszcz, P., Loshchilov, I., and Hutter, F. (2018).
 \newblock Back to {{Basics}}: {{Benchmarking Canonical Evolution Strategies}}
   for {{Playing Atari}}.
-\newblock pages 1419--1426, 2018.
+\newblock pages 1419--1426.
 
-\bibitem{lecarpentierLUCIEEvaluationSelection2022}
-E.~Lecarpentier, P.~Templier, E.~Rachelson, and D.~G. Wilson.
+\bibitem[Lecarpentier et~al., 2022]{lecarpentierLUCIEEvaluationSelection2022}
+Lecarpentier, E., Templier, P., Rachelson, E., and Wilson, D.~G. (2022).
 \newblock {{LUCIE}}: {{An Evaluation}} and {{Selection Method}} for
   {{Stochastic Problems}}.
 \newblock In {\em Proceedings of the {{Genetic}} and {{Evolutionary Computation
-  Conference}} ({{GECCO}} 2022)}, 2022.
+  Conference}} ({{GECCO}} 2022)}.
 
-\bibitem{mnihHumanlevelControlDeep2015}
-V.~Mnih, K.~Kavukcuoglu, D.~Silver, A.~A. Rusu, J.~Veness, M.~G. Bellemare,
-  A.~Graves, M.~Riedmiller, A.~K. Fidjeland, G.~Ostrovski, et~al.
+\bibitem[Mnih et~al., 2015]{mnihHumanlevelControlDeep2015}
+Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A.~A., Veness, J., Bellemare,
+  M.~G., Graves, A., Riedmiller, M., Fidjeland, A.~K., Ostrovski, G., et~al.
+  (2015).
 \newblock Human-level control through deep reinforcement learning.
-\newblock {\em nature}, 518(7540):529--533, 2015.
+\newblock {\em nature}, 518(7540):529--533.
 
-\bibitem{salimansEvolutionStrategiesScalable2017}
-T.~Salimans, J.~Ho, X.~Chen, S.~Sidor, and I.~Sutskever.
+\bibitem[Pourchot et~al., 2018]{pourchotImportanceMixingImproving2018}
+Pourchot, A., Perrin, N., and Sigaud, O. (2018).
+\newblock Importance mixing: {{Improving}} sample reuse in evolutionary policy
+  search methods.
+
+\bibitem[Pourchot and Sigaud, 2019]{pourchotCEMRLCombiningEvolutionary2019}
+Pourchot, A. and Sigaud, O. (2019).
+\newblock {{CEM-RL}}: {{Combining}} evolutionary and gradient-based methods for
+  policy search.
+\newblock {\em arXiv:1810.01222 [cs, stat]}.
+
+\bibitem[Salimans et~al., 2017]{salimansEvolutionStrategiesScalable2017}
+Salimans, T., Ho, J., Chen, X., Sidor, S., and Sutskever, I. (2017).
 \newblock Evolution {{Strategies}} as a {{Scalable Alternative}} to
   {{Reinforcement Learning}}.
-\newblock Mar. 2017.
+
+\bibitem[Templier et~al., 2021]{templierGeometricEncodingNeural2021}
+Templier, P., Rachelson, E., and Wilson, D.~G. (2021).
+\newblock A {{Geometric Encoding}} for {{Neural Network Evolution}}.
+\newblock page~9.
 
 \end{thebibliography}

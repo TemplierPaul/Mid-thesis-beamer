@@ -1,6 +1,30 @@
-\begin{frame}{\tcv{} ES on noisy environments}%
+\begin{frame}{Content}
+    \begin{enumerate}%
+      \setlength\itemsep{1em}%
+      \item {\color{lightgray} \ti{}} \tei{}
+      \item {\color{lightgray} \tii{}} \teii{}
+      \item {\color{lightgray} \tiii{}} \teiii{}
+      \item {\color{lightgray} \tiv{}} \teiv{}
+      \item {\color{lightgray} \tcv{}} \tev{}
+      \item {\color{lightgray} \tvi{}} \tevi{}
+    \end{enumerate}
+  \end{frame}
 
-        \onslide<2->{
+% Weights
+\begin{frame}{\tcv{} Stochastic fitness}
+    
+    \begin{figure}
+    \centering
+    \includegraphics[width=.4\linewidth]{images/misc/bigfish.png}
+    \end{figure}
+    \begin{center}
+        \small BigFish levels generated from different seeds
+    \end{center}
+\end{frame}
+
+\begin{frame}{\tcv{} ES on stochastic environments}%
+
+        \onslide<1->{
         %SpaceInvaders
         \begin{columns}
           \begin{column}{0.45\linewidth}
@@ -8,18 +32,18 @@
               \begin{figure}
                 \centering
                 \includegraphics[width=\linewidth]{images/ERL/plots/bigfish_single_1.png}
-                \caption{ES on BigFish, same level}
+                \small ES on BigFish, same level
               \end{figure}
             \end{center}
           \end{column}
         }
-        \onslide<3->{
+        \onslide<2->{
           \begin{column}{0.45\linewidth}
             \begin{center}
               \begin{figure}
                   \centering
                   \includegraphics[width=\linewidth]{images/ERL/plots/bigfish_1.png}
-                  \caption{ES on BigFish, random level}
+                  \small ES on BigFish, random level
               \end{figure}
             \end{center}
           \end{column}
@@ -33,7 +57,7 @@
 \begin{frame}{\tcv{} The \lucie{} selection procedure}%
     \vspace{1em}
     \onslide<2->{%
-        \textbf{Objective:} identify the {\color{cyan}\textbf{best $\mu$}} individuals with as {\color{magenta}\textbf{few evaluations}} as possible. \cite{lecarpentierLUCIEEvaluationSelection2022}
+        \textbf{Objective:} identify the {\color{cyan}\textbf{best $\mu$}} individuals with as {\color{magenta}\textbf{few evaluations}} as possible. {\color{lightgray} \cite{lecarpentierLUCIEEvaluationSelection2022}}
     }
     \vspace{1em}
     \begin{figure}
@@ -178,6 +202,51 @@
     }
 \end{frame}
 
+
+\begin{frame}{\tcv{} Classic Control}%
+    \def\figwidth{0.16\linewidth}%
+    \def\yleg{Fitness}%
+    \begin{textblock*}{2cm}(0cm,0.7cm) % {block width} (coords)
+        $\%$noise
+    \end{textblock*}
+    \begin{table}%[!t]
+        \centering
+        \begin{tabular}{ccccccc}
+            && $0\%$ & $200\%$ & $400\%$ & $600\%$ & $800\%$ \\
+            \raisebox{3\normalbaselineskip}[0pt][0pt]{\rotatebox[origin=c]{90}{\cartpole}} &
+            \raisebox{3\normalbaselineskip}[1cm][0cm]{\rotatebox[origin=c]{90}{\vspace{1cm}\yleg}}&
+            \includegraphics[width=\figwidth]{images/LUCIE/cartpole/boxplot_cartpole_0.png} &
+            \includegraphics[width=\figwidth]{images/LUCIE/cartpole/boxplot_cartpole_200.png} &
+            \includegraphics[width=\figwidth]{images/LUCIE/cartpole/boxplot_cartpole_400.png} &
+            \includegraphics[width=\figwidth]{images/LUCIE/cartpole/boxplot_cartpole_600.png} &
+            \includegraphics[width=\figwidth]{images/LUCIE/cartpole/boxplot_cartpole_800.png}\\
+        \end{tabular}
+%				\caption{Final validation fitness for \cartpole{} neuroevolution under posterior uniform noise.}
+%				\label{table:cartpole-uniform-eval-validation}
+    \end{table}
+
+    \vspace{-1em}
+
+    \def\figwidth{0.16\linewidth}
+    \def\yleg{Fitness}
+    \begin{table}[]
+        \centering
+        \begin{tabular}{ccccccc}
+%					&& 0\% & 200\% & 400\% & 600\% & 800\% \\
+            \raisebox{3.5\normalbaselineskip}[0pt][0pt]{\rotatebox[origin=c]{90}{\acrobot{}}} &
+            \raisebox{3.5\normalbaselineskip}[1cm][0cm]{\rotatebox[origin=c]{90}{\vspace{1cm}\yleg}}&
+            \includegraphics[width=\figwidth]{images/LUCIE/acrobot/boxplot_acrobot_0_u.png} &
+            \includegraphics[width=\figwidth]{images/LUCIE/acrobot/boxplot_acrobot_200_u.png} &
+            \includegraphics[width=\figwidth]{images/LUCIE/acrobot/boxplot_acrobot_400_u.png} &
+            \includegraphics[width=\figwidth]{images/LUCIE/acrobot/boxplot_acrobot_600_u.png} &
+            \includegraphics[width=\figwidth]{images/LUCIE/acrobot/boxplot_acrobot_800_u.png}\\
+        \end{tabular}
+%				\caption{Final validation fitness for Acrobot neuroevolution under posterior uniform noise.}
+%				\label{table:acrobot-uniform-eval-validation}
+    \end{table}
+
+\end{frame}
+
 \begin{frame}{\tcv{} \lucie{} for Evolution Strategies}
     
     \begin{columns}
@@ -199,11 +268,11 @@
     \begin{column}{0.45\linewidth}
     \begin{center}
     \onslide<6->{
-        \begin{block}{Heritage}
+        \begin{block}{Population mixing}
             Keeping evaluated individuals  
             \begin{itemize}
                 \item Elitist ES
-                \item Importance Mixing
+                \item Importance Mixing {\color{lightgray} \cite{pourchotImportanceMixingImproving2018}}
             \end{itemize}
         \end{block}
     }
@@ -260,26 +329,27 @@
                 \def\scale{0.5}
                 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-\scale,xscale=\scale]
                 %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
-                    \onslide<7->{
-                    %Shape: Boxed Bezier Curve [id:dp5389195998778902] 
-                    \draw    (264.16,257.15) .. controls (366.88,257.15) and (355.82,75.47) .. (395.5,75.16) .. controls (435.18,74.84) and (422.87,256.84) .. (528.26,258.58) ;
-                    \draw (442.91,110.85) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t-1})$};
-                    }
-                    \only<8>{
+                \onslide<7->{
+                    % \onslide<8->{
                     %Shape: Boxed Bezier Curve [id:dp19284355666403086] 
                     \draw    (163.42,256.57) .. controls (266.14,256.57) and (255.08,74.89) .. (294.76,74.57) .. controls (323.56,74.35) and (324.97,170.2) .. (363.9,223.42) .. controls (378.6,243.51) and (398.64,257.52) .. (427.52,258) ;
-                    \draw (190,105.96) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t})$};   
-                    }
-                    \onslide<9->{
+                    \draw (160,110) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t})$};   
+                % }
+                % \onslide<9->{
                     %Shape: Boxed Bezier Curve [id:dp19284355666403086] 
                     \draw [fill={rgb, 255:red, 169; green, 229; blue, 103 }  ,fill opacity=1 ]   (163.42,256.57) .. controls (266.14,256.57) and (255.08,74.89) .. (294.76,74.57) .. controls (323.56,74.35) and (324.97,170.2) .. (363.9,223.42) .. controls (378.6,243.51) and (398.64,257.52) .. (427.52,258) ;
-                    \draw (201.02,105.96) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t})$};   
-                    }
-            
-                    \onslide<10->{
+                % }
+
+                % \onslide<7->{
+                    %Shape: Boxed Bezier Curve [id:dp5389195998778902] 
+                    \draw    (264.16,257.15) .. controls (366.88,257.15) and (355.82,75.47) .. (395.5,75.16) .. controls (435.18,74.84) and (422.87,256.84) .. (528.26,258.58) ;
+                    \draw (442.91,110) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t-1})$};
+                % }
+                
+                % \onslide<10->{
                     %Shape: Path Data [id:dp639977105939747] 
                     \draw  [fill={rgb, 255:red, 94; green, 147; blue, 36 }  ,fill opacity=1 ] (363.9,223.42) .. controls (378.6,243.51) and (398.64,257.52) .. (427.52,258) -- (266.2,257.12) .. controls (307.63,256.14) and (330.18,225.11) .. (345.13,188.95) .. controls (350.31,201.36) and (356.41,213.18) .. (363.9,223.42) -- cycle ;
-                    }
+                }
             
                 \end{tikzpicture}
             

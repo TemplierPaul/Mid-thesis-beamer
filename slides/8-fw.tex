@@ -1,5 +1,50 @@
-\begin{frame}{\tcvi{} Future work}
-    \onslide<2->{
+\begin{frame}{Content}
+    \begin{enumerate}%
+      \setlength\itemsep{1em}%
+      \item {\color{lightgray} \ti{}} \tei{}
+      \item {\color{lightgray} \tii{}} \teii{}
+      \item {\color{lightgray} \tiii{}} \teiii{}
+      \item {\color{lightgray} \tiv{}} \teiv{}
+      \item {\color{lightgray} \tv{}} \tev{}
+      \item {\color{lightgray} \tcvi{}} \tevi{}
+    \end{enumerate}
+  \end{frame}
+
+% \begin{frame}{\tcvi{} Future work}
+%     \onslide<2->{
+%     \begin{block}{LUCI ES}
+%         \begin{itemize}
+%             \item Explore ($\mu , \lambda$) ES
+%             \item Ranking in Bandit problems
+%             \item Heritage (Importance Mixing, elitism)
+%             \item Scalability
+%         \end{itemize}
+%     \end{block}
+%     }
+%     \onslide<3->{
+%     \begin{block}{ES for Policy Search}
+%         \begin{itemize}
+%             \item Neuroevolution constraints and theory
+%             % \item Theory of ES for policy search
+%             \item Ablation study of existing methods
+%         \end{itemize}
+%     \end{block}
+%     }
+%     \onslide<4->{
+%     \begin{block}{Evolving Evolution Strategies}
+%         \begin{itemize}
+%             \item Make ES methods emerge from scratch
+%             % \item Improve current methods by bootstrapping from them
+%             \item Neuromodulation: adapting ES during the evolution
+%         \end{itemize}
+%     \end{block}
+%     }
+    
+% \end{frame}
+
+
+\begin{frame}{\tcvi{} Future work}%
+    \only<1>{
     \begin{block}{LUCI ES}
         \begin{itemize}
             \item Explore ($\mu , \lambda$) ES
@@ -9,16 +54,7 @@
         \end{itemize}
     \end{block}
     }
-    \onslide<3->{
-    \begin{block}{ES for Policy Search}
-        \begin{itemize}
-            \item Neuroevolution constraints and theory
-            % \item Theory of ES for policy search
-            \item Ablation study of existing methods
-        \end{itemize}
-    \end{block}
-    }
-    \onslide<4->{
+    \only<2>{
     \begin{block}{Evolving Evolution Strategies}
         \begin{itemize}
             \item Make ES methods emerge from scratch
@@ -27,14 +63,18 @@
         \end{itemize}
     \end{block}
     }
-    
-\end{frame}
-
-
-\begin{frame}{\tcvi{} Timeline}%
+    \only<3>{
+    \begin{block}{ES for Policy Search}
+        \begin{itemize}
+            \item Neuroevolution constraints and theory
+            % \item Theory of ES for policy search
+            \item Ablation study of existing methods
+        \end{itemize}
+    \end{block}
+    }
+    \only<4>{
+    }
     \begin{figure}
-
-
         \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
         \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
@@ -79,7 +119,7 @@
         %Straight Lines [id:da5380962385035739] 
         \draw    (323.14,159.02) -- (323.14,200) ;
         %Straight Lines [id:da3604388553748691] 
-        \draw    (418.76,159.02) -- (418.76,200) ;
+        % \draw    (418.76,159.02) -- (418.76,200) ;
         
         % Text Node
         \draw (364.53,92.77) node  [font=\footnotesize] [align=left] {2022};
@@ -112,7 +152,7 @@
         % Text Node
         \draw (305.38,165.85) node  [font=\tiny] [align=left] {LUCIE};
         % Text Node
-        \draw (397.59,165.85) node  [font=\tiny] [align=left] {LUCIES};
+        % \draw (397.59,165.85) node  [font=\tiny] [align=left] {LUCIES};
         % Text Node
         \draw (279.43,131.81) node  [font=\footnotesize,color={rgb, 255:red, 255; green, 255; blue, 255 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{22.29pt}\setlength\topsep{0pt}
         PhD
@@ -126,9 +166,7 @@
         Intern
         \end{minipage}};
         
-        
         \end{tikzpicture}
-        
 
     \end{figure}
 \end{frame}

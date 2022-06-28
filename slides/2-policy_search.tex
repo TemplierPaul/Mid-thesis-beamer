@@ -1,16 +1,74 @@
-\begin{frame}{\tcii{} Policy search}
-    \onslide<2->{
-    \begin{center}
-      \includegraphics[width=7cm]{images/misc/erl.png}\\
-      \small \url{https://github.com/d9w/evolution/blob/master/imgs/erl.png}
-    \end{center}
-    }
+\begin{frame}{Content}
+    \begin{enumerate}%
+      \setlength\itemsep{1em}%
+      \item {\color{lightgray} \ti{}} \tei{}
+      \item {\color{lightgray} \tcii{}} \teii{}
+      \item {\color{lightgray} \tiii{}} \teiii{}
+      \item {\color{lightgray} \tiv{}} \teiv{}
+      \item {\color{lightgray} \tv{}} \tev{}
+      \item {\color{lightgray} \tvi{}} \tevi{}
+    \end{enumerate}
+  \end{frame}
+  
+% \begin{frame}{\tcii{} Policy search}
+%     \onslide<2->{
+%     \begin{center}
+%       \includegraphics[width=7cm]{images/misc/erl.png}\\
+%       \small \url{https://github.com/d9w/evolution/blob/master/imgs/erl.png}
+%     \end{center}
+%     }
+% \end{frame}
+
+\begin{frame}{\tcii{} Policy }
+    \begin{figure}
+
+        \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+        \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+        %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+        
+        \onslide<1->{
+            % Text Node
+            \draw    (226.13,192.12) .. controls (226.13,187.7) and (229.71,184.12) .. (234.13,184.12) -- (347.13,184.12) .. controls (351.54,184.12) and (355.13,187.7) .. (355.13,192.12) -- (355.13,210.12) .. controls (355.13,214.53) and (351.54,218.12) .. (347.13,218.12) -- (234.13,218.12) .. controls (229.71,218.12) and (226.13,214.53) .. (226.13,210.12) -- cycle  ;
+            \draw (290.63,201.12) node  [font=\Large] [align=left] {Environment};
+        }
+        \onslide<2->{
+            % Text Node
+            \draw    (259.23,61.12) .. controls (259.23,56.7) and (262.81,53.12) .. (267.23,53.12) -- (315.23,53.12) .. controls (319.64,53.12) and (323.23,56.7) .. (323.23,61.12) -- (323.23,79.12) .. controls (323.23,83.53) and (319.64,87.12) .. (315.23,87.12) -- (267.23,87.12) .. controls (262.81,87.12) and (259.23,83.53) .. (259.23,79.12) -- cycle  ;
+            \draw (291.23,70.12) node  [font=\Large] [align=left] {Agent};
+            }
+        \onslide<3->{
+            \draw (213.52,130.5) node  [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ] [align=left] {State};
+            %Straight Lines [id:da707899894021265] 
+            \draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (225.75,190) -- (190,190) -- (190,80) -- (258,80) ;
+            \draw [shift={(260,80)}, rotate = 180] [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+        }
+        \onslide<4->{
+            \draw (432.85,130.5) node  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,opacity=1 ] [align=left] {Action};
+            %Straight Lines [id:da4644120658110985] 
+            \draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (323.25,70) -- (410,70) -- (410,200) -- (356.75,200) ;
+            \draw [shift={(354.75,200)}, rotate = 360] [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+        }
+        \onslide<5->{
+            \draw (137.86,130.5) node  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,opacity=1 ] [align=left] {Reward};
+            %Straight Lines [id:da5672035921879461] 
+            \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (225.75,210) -- (170,210) -- (170,60) -- (258,60) ;
+            \draw [shift={(260,60)}, rotate = 180] [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+        }
+        % Text Node
+        % Text Node
+        % Text Node
+
+
+        \end{tikzpicture}
+
+    \end{figure}
 \end{frame}
 
 \begin{frame}{\tcii{} Neural networks}
     \begin{center}
       \includegraphics[width=8cm]{images/misc/dqn.png}\\
-      \small Neural Network used in Deep Q Networks \cite{mnihHumanlevelControlDeep2015}
+      \small Neural Network used in Deep Q Networks {\color{lightgray} \cite{mnihHumanlevelControlDeep2015}}
     \end{center}
 \end{frame}
 
@@ -99,51 +157,177 @@
 \end{frame}
 
 
-\begin{frame}{\tcii{} Variants of \es}
+% \begin{frame}{\tcii{} Variants of \es}
+%     \onslide<1->{
+%     \begin{block}{Evolution Strategies}
+%         \begin{columns}
+%             \begin{column}{0.45\linewidth}
+%                 \begin{itemize}
+%                     \item ($\mu , \lambda$) ES
+%                     \item \snes
+%                     \item Canonical ES 
+%                     \item OpenAI ES
+%                 \end{itemize}
+%             \end{column}
+%             \begin{column}{0.45\linewidth}
+%                 \begin{itemize}
+%                     \item \cmaes
+%                     \item \xnes
+%                     \item Cross-Entropy Method
+%                     \item Augmented Random Search
+%                 \end{itemize}
+%             \end{column}
+%         \end{columns}
+%     \end{block}
+%     }
+%     \onslide<2->{   
+%     \begin{block}{Neuroevolution for policy search}
+%         \begin{itemize}
+%             \item Large dimensions ($10^6$ parameters)
+%             \item Iterative evaluation 
+%         \end{itemize}
+%     \end{block}
+%     }
+    
+% \end{frame}
+
+
+\begin{frame}{\tcii{} Variants of Evolution Strategies}
+    
+    \begin{columns}
+    \begin{column}{0.45\linewidth}
+    \begin{center}
+
     \onslide<1->{
-    \begin{block}{Evolution Strategies}
-        \begin{columns}
-            \begin{column}{0.45\linewidth}
-                \begin{itemize}
-                    \item ($\mu , \lambda$) ES
-                    \item \snes
-                    \item Canonical ES 
-                    \item OpenAI ES
-                \end{itemize}
-            \end{column}
-            \begin{column}{0.45\linewidth}
-                \begin{itemize}
-                    \item \cmaes
-                    \item \xnes
-                    \item Cross-Entropy Method
-                    \item Augmented Random Search
-                \end{itemize}
-            \end{column}
-        \end{columns}
+    \begin{block}{Fixed covariance}
+        \begin{itemize}
+        \item ($\mu , \lambda$) ES
+        \item Canonical ES 
+        \item OpenAI ES
+        \end{itemize}
     \end{block}
     }
-    \onslide<2->{   
-    \begin{block}{Neuroevolution for policy search}
+
+    \onslide<2->{
+    \begin{block}{Covariance matrix adaptation}
         \begin{itemize}
-            \item large dimensions (1.6 $.10^6$ parameters)
-            \item expensive evaluation 
+            \item \cmaes
         \end{itemize}
     \end{block}
     }
     
+
+    \end{center}
+    \end{column}
+    
+    \begin{column}{0.45\linewidth}
+    \begin{center}
+
+    \onslide<3->{
+    \begin{block}{Natural gradient}
+        \begin{itemize}
+            \item \xnes
+            \item \snes
+        \end{itemize}
+    \end{block}
+    }
+
+    \onslide<4->{
+    \begin{block}{Adjacent methods}
+    \begin{itemize}
+        \item Cross-Entropy Method
+        \item Augmented Random Search
+    \end{itemize}
+    \end{block}
+    }
+
+    \end{center}
+    \end{column}
+    \end{columns}
+
+    \vspace{0.5cm}
+
+    \onslide<5->{
+    \begin{block}{Neuroevolution for policy search}
+        \begin{itemize}
+            \item Large dimensions ($10^6$ parameters)
+            \item Iterative evaluation 
+        \end{itemize}
+    \end{block}
+    }
+
+\end{frame}
+
+\begin{frame}{\tcii{} Canonical ES}
+    \begin{algorithm}[H]
+        \begin{algorithmic}[1]
+            \onslide<1->{
+        \STATE $\sigma$ - Mutation step-size
+        \STATE $\theta_0$ - Initial policy parameters    
+        \STATE $F$ - Fitness function  
+        \STATE $\lambda$ - Offsprings population size  
+        \STATE $\mu$ - Parents population size  
+            }
+        \onslide<2->{
+            \STATE $w_i = \frac{log(\mu + 0.5) - log(i)}{\sum_{j=1}^{\mu}log(\mu + 0.5) - log(j)}$ \quad $\forall i= 1...\lambda$ 
+            }
+        \onslide<3->{
+            \FOR{t=0, 1, ...}
+                \onslide<4->{
+                    \FOR{i=0, 1, ... $\lambda$}
+                        \STATE Sample noise: $\epsilon_i \sim N(0, I)$ 
+                        % \STATE Create agents: $z_i \leftarrow{} \theta_t + \sigma \epsilon_i$ 
+                        \STATE Evaluate score: $s_i \leftarrow{} F(\theta_t + \sigma \epsilon_i)$
+                    \ENDFOR
+                    }
+                \onslide<5->{
+                \STATE Sort $(\epsilon_1, ..., \epsilon_\lambda)$ according to $s$ ($\epsilon_i$ with best $s_i$ first)
+                }
+                \onslide<6->{
+                \STATE Update policy: $\theta_{t+1} \leftarrow{} \theta_t + \sigma \sum_{j=1}^{\mu} w_j \epsilon_j$
+                }
+                % \STATE No $\sigma$ update \\
+            \ENDFOR
+            }   
+        
+    \end{algorithmic}
+    \end{algorithm}
+\end{frame}
+
+\begin{frame}{\tcii{} Utility}
+    \begin{center}
+      \includegraphics[height=6cm]{images/ES/es_weights.png}\\
+      \small Utility values of the individuals in a ranked population for $\lambda$=200; $\mu$=100
+    \end{center}
 \end{frame}
 
 \begin{frame}{\tcii{} Benchmarking Evolutionary Reinforcement Learning}
 
     \begin{block}{Reproduction settings}
-        Reproducing \canonical{} \canonicalpaper{} and \openaies{} \openaipaper{} on the Arcade Learning Environment.
+        Reproducing \canonical{} {\color{lightgray}\canonicalpaper{}} and \openaies{} {\color{lightgray} \openaipaper{}} on the Arcade Learning Environment.
     \end{block}
     
+    \begin{columns}
+        \begin{column}{0.45\linewidth}
+            \begin{center}
+                \begin{figure}
+                    \includegraphics[width=.9\linewidth]{images/BERL/Alien-v0.png}
+                \end{figure}
+            \end{center}
+        \end{column}
+        
+        \begin{column}{0.45\linewidth}
+            \begin{center}
+                \begin{figure}
+                    \includegraphics[width=.9\linewidth]{images/BERL/Pong-v0.png}
+                \end{figure}
+            \end{center}
+        \end{column}
+    \end{columns}
     \begin{center}
-        \begin{figure}
-            \includegraphics[width=7cm]{images/BERL/Alien-v0.png}
-            \caption{Evolution of \canonical{} and \openaies{} on Alien with 800 CPUh compute budget}
-        \end{figure}
+        \small Evolution of \canonical{} and \openaies{} on Alien and Pong with 800 CPUh compute budget
     \end{center}
+
+    
 
 \end{frame}
