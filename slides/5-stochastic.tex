@@ -178,72 +178,189 @@
     }
 \end{frame}
 
-% LUCIE ES
-\begin{frame}{\tcv{} \lucie{} for Evolution Strategies}%
-    \begin{figure}
-        
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
-        \onslide<2->{
-        %Shape: Axis 2D [id:dp6438436813949673] 
-        \draw  (61.09,246.2) -- (495.88,246.2)(104.57,34.7) -- (104.57,269.7) (488.88,241.2) -- (495.88,246.2) -- (488.88,251.2) (99.57,41.7) -- (104.57,34.7) -- (109.57,41.7)  ;
-        % Text Node
-        \draw (503.2,237.2) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$rank$};
-        % Text Node
-        \draw (114.8,37) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$weight$};
-        }
-
-        \onslide<3->{
-        %Straight Lines [id:da7596112643907376] 
-        \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (104.69,106.9) -- (235.87,106.9) -- (236.59,246.1) -- (465.09,246.1) ;
-        \draw (85.2,93) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 255; green, 2; blue, 33 }  ,opacity=1 ]  {$\frac{1}{\mu }$};
-        \draw (370.87,67.67) node [anchor=west] [inner sep=0.75pt]  [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {Split};
-        }
-
-        \onslide<4->{
-        %Curve Lines [id:da6394141615756642] 
-        \draw [color={rgb, 255:red, 97; green, 174; blue, 9 }  ,draw opacity=1 ]   (105.2,78.2) .. controls (115.09,103.35) and (186.69,191.75) .. (260.69,214.15) .. controls (334.69,236.55) and (435.15,245.18) .. (465.09,246.1) ;
-        \draw (370.6,88.73) node [anchor=west] [inner sep=0.75pt]  [color={rgb, 255:red, 97; green, 174; blue, 9 }  ,opacity=1 ] [align=left] {Rank};
-        }
-
-    \end{tikzpicture}
-
-    \end{figure}
-\end{frame}
-
-\begin{frame}{\tcv{} Importance Mixing for LUCI ES}%
-    \begin{figure}
-
-    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-    %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+\begin{frame}{\tcv{} \lucie{} for Evolution Strategies}
     
-        \only<3>{
-        %Shape: Boxed Bezier Curve [id:dp19284355666403086] 
-        \draw    (163.42,256.57) .. controls (266.14,256.57) and (255.08,74.89) .. (294.76,74.57) .. controls (323.56,74.35) and (324.97,170.2) .. (363.9,223.42) .. controls (378.6,243.51) and (398.64,257.52) .. (427.52,258) ;
-        \draw (201.02,105.96) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t})$};   
-        }
-        \onslide<4->{
-        %Shape: Boxed Bezier Curve [id:dp19284355666403086] 
-        \draw [fill={rgb, 255:red, 169; green, 229; blue, 103 }  ,fill opacity=1 ]   (163.42,256.57) .. controls (266.14,256.57) and (255.08,74.89) .. (294.76,74.57) .. controls (323.56,74.35) and (324.97,170.2) .. (363.9,223.42) .. controls (378.6,243.51) and (398.64,257.52) .. (427.52,258) ;
-        \draw (201.02,105.96) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t})$};   
-        }
+    \begin{columns}
+        
+    \begin{column}{0.45\linewidth}
+    \begin{center}
+    \onslide<2->{
+        \begin{block}{Bandit problem}
+            Selecting which individuals to evaluate
+            \begin{itemize}
+                \item Split 
+                \item Rank
+            \end{itemize}
+        \end{block}
+    }
+    \end{center}
+    \end{column}
+    
+    \begin{column}{0.45\linewidth}
+    \begin{center}
+    \onslide<6->{
+        \begin{block}{Heritage}
+            Keeping evaluated individuals  
+            \begin{itemize}
+                \item Elitist ES
+                \item Importance Mixing
+            \end{itemize}
+        \end{block}
+    }
+    \end{center}
+    \end{column}
 
-        \onslide<2->{
-        %Shape: Boxed Bezier Curve [id:dp5389195998778902] 
-        \draw    (264.16,257.15) .. controls (366.88,257.15) and (355.82,75.47) .. (395.5,75.16) .. controls (435.18,74.84) and (422.87,256.84) .. (528.26,258.58) ;
-        \draw (442.91,110.85) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t-1})$};
-        }
-        \onslide<4->{
-        %Shape: Path Data [id:dp639977105939747] 
-        \draw  [fill={rgb, 255:red, 94; green, 147; blue, 36 }  ,fill opacity=1 ] (363.9,223.42) .. controls (378.6,243.51) and (398.64,257.52) .. (427.52,258) -- (266.2,257.12) .. controls (307.63,256.14) and (330.18,225.11) .. (345.13,188.95) .. controls (350.31,201.36) and (356.41,213.18) .. (363.9,223.42) -- cycle ;
-        }
+    \end{columns}
 
-    \end{tikzpicture}
+    \begin{columns}
+        
+        \begin{column}{0.45\linewidth}
+        \begin{center}
+            \begin{figure}
+        
+                \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+                \def\scale{0.5}
+                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-\scale,xscale=\scale]
+                %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+                    \onslide<3->{
+                    %Shape: Axis 2D [id:dp6438436813949673] 
+                    \draw  (61.09,246.2) -- (495.88,246.2)(104.57,34.7) -- (104.57,269.7) (488.88,241.2) -- (495.88,246.2) -- (488.88,251.2) (99.57,41.7) -- (104.57,34.7) -- (109.57,41.7)  ;
+                    % Text Node
+                    \draw (503.2,237.2) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$rank$};
+                    % Text Node
+                    \draw (114.8,37) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$weight$};
+                    }
+            
+                    \onslide<4->{
+                    %Straight Lines [id:da7596112643907376] 
+                    \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (104.69,106.9) -- (235.87,106.9) -- (236.59,246.1) -- (465.09,246.1) ;
+                    \draw (85.2,93) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 255; green, 2; blue, 33 }  ,opacity=1 ]  {$\frac{1}{\mu }$};
+                    \draw (370.87,67.67) node [anchor=west] [inner sep=0.75pt]  [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {Split};
+                    % Text Node
+                    \draw (232,253.6) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ]  {$\mu $};
+                    }
+            
+                    \onslide<5->{
+                    %Curve Lines [id:da6394141615756642] 
+                    \draw [color={rgb, 255:red, 97; green, 174; blue, 9 }  ,draw opacity=1 ]   (105.2,78.2) .. controls (115.09,103.35) and (186.69,191.75) .. (260.69,214.15) .. controls (334.69,236.55) and (435.15,245.18) .. (465.09,246.1) ;
+                    \draw (370.6,88.73) node [anchor=west] [inner sep=0.75pt]  [color={rgb, 255:red, 97; green, 174; blue, 9 }  ,opacity=1 ] [align=left] {Rank};
+                    }
+            
+                \end{tikzpicture}
+            
+                \end{figure}
+        \end{center}
+        \end{column}
+        
+        \begin{column}{0.45\linewidth}
+        \begin{center}
+            \begin{figure}
 
-    \end{figure}
+                \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+                \def\scale{0.5}
+                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-\scale,xscale=\scale]
+                %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+                    \onslide<7->{
+                    %Shape: Boxed Bezier Curve [id:dp5389195998778902] 
+                    \draw    (264.16,257.15) .. controls (366.88,257.15) and (355.82,75.47) .. (395.5,75.16) .. controls (435.18,74.84) and (422.87,256.84) .. (528.26,258.58) ;
+                    \draw (442.91,110.85) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t-1})$};
+                    }
+                    \only<8>{
+                    %Shape: Boxed Bezier Curve [id:dp19284355666403086] 
+                    \draw    (163.42,256.57) .. controls (266.14,256.57) and (255.08,74.89) .. (294.76,74.57) .. controls (323.56,74.35) and (324.97,170.2) .. (363.9,223.42) .. controls (378.6,243.51) and (398.64,257.52) .. (427.52,258) ;
+                    \draw (190,105.96) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t})$};   
+                    }
+                    \onslide<9->{
+                    %Shape: Boxed Bezier Curve [id:dp19284355666403086] 
+                    \draw [fill={rgb, 255:red, 169; green, 229; blue, 103 }  ,fill opacity=1 ]   (163.42,256.57) .. controls (266.14,256.57) and (255.08,74.89) .. (294.76,74.57) .. controls (323.56,74.35) and (324.97,170.2) .. (363.9,223.42) .. controls (378.6,243.51) and (398.64,257.52) .. (427.52,258) ;
+                    \draw (201.02,105.96) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t})$};   
+                    }
+            
+                    \onslide<10->{
+                    %Shape: Path Data [id:dp639977105939747] 
+                    \draw  [fill={rgb, 255:red, 94; green, 147; blue, 36 }  ,fill opacity=1 ] (363.9,223.42) .. controls (378.6,243.51) and (398.64,257.52) .. (427.52,258) -- (266.2,257.12) .. controls (307.63,256.14) and (330.18,225.11) .. (345.13,188.95) .. controls (350.31,201.36) and (356.41,213.18) .. (363.9,223.42) -- cycle ;
+                    }
+            
+                \end{tikzpicture}
+            
+                \end{figure}
+        \end{center}
+        \end{column}
+        
+    \end{columns}
+
+    
 \end{frame}
+
+
+% % LUCIE ES
+% \begin{frame}{\tcv{} \lucie{} for Evolution Strategies}%
+%     \begin{figure}
+        
+%     \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+%     \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%     %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+%         \onslide<2->{
+%         %Shape: Axis 2D [id:dp6438436813949673] 
+%         \draw  (61.09,246.2) -- (495.88,246.2)(104.57,34.7) -- (104.57,269.7) (488.88,241.2) -- (495.88,246.2) -- (488.88,251.2) (99.57,41.7) -- (104.57,34.7) -- (109.57,41.7)  ;
+%         % Text Node
+%         \draw (503.2,237.2) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$rank$};
+%         % Text Node
+%         \draw (114.8,37) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$weight$};
+%         }
+
+%         \onslide<3->{
+%         %Straight Lines [id:da7596112643907376] 
+%         \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (104.69,106.9) -- (235.87,106.9) -- (236.59,246.1) -- (465.09,246.1) ;
+%         \draw (85.2,93) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 255; green, 2; blue, 33 }  ,opacity=1 ]  {$\frac{1}{\mu }$};
+%         \draw (370.87,67.67) node [anchor=west] [inner sep=0.75pt]  [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {Split};
+%         % Text Node
+%         \draw (232,253.6) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ]  {$\mu $};
+%         }
+
+%         \onslide<4->{
+%         %Curve Lines [id:da6394141615756642] 
+%         \draw [color={rgb, 255:red, 97; green, 174; blue, 9 }  ,draw opacity=1 ]   (105.2,78.2) .. controls (115.09,103.35) and (186.69,191.75) .. (260.69,214.15) .. controls (334.69,236.55) and (435.15,245.18) .. (465.09,246.1) ;
+%         \draw (370.6,88.73) node [anchor=west] [inner sep=0.75pt]  [color={rgb, 255:red, 97; green, 174; blue, 9 }  ,opacity=1 ] [align=left] {Rank};
+%         }
+
+%     \end{tikzpicture}
+
+%     \end{figure}
+% \end{frame}
+
+% \begin{frame}{\tcv{} Importance Mixing for LUCI ES}%
+%     \begin{figure}
+
+%     \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+%     \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%     %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+    
+%         \only<3>{
+%         %Shape: Boxed Bezier Curve [id:dp19284355666403086] 
+%         \draw    (163.42,256.57) .. controls (266.14,256.57) and (255.08,74.89) .. (294.76,74.57) .. controls (323.56,74.35) and (324.97,170.2) .. (363.9,223.42) .. controls (378.6,243.51) and (398.64,257.52) .. (427.52,258) ;
+%         \draw (201.02,105.96) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t})$};   
+%         }
+%         \onslide<4->{
+%         %Shape: Boxed Bezier Curve [id:dp19284355666403086] 
+%         \draw [fill={rgb, 255:red, 169; green, 229; blue, 103 }  ,fill opacity=1 ]   (163.42,256.57) .. controls (266.14,256.57) and (255.08,74.89) .. (294.76,74.57) .. controls (323.56,74.35) and (324.97,170.2) .. (363.9,223.42) .. controls (378.6,243.51) and (398.64,257.52) .. (427.52,258) ;
+%         \draw (201.02,105.96) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t})$};   
+%         }
+
+%         \onslide<2->{
+%         %Shape: Boxed Bezier Curve [id:dp5389195998778902] 
+%         \draw    (264.16,257.15) .. controls (366.88,257.15) and (355.82,75.47) .. (395.5,75.16) .. controls (435.18,74.84) and (422.87,256.84) .. (528.26,258.58) ;
+%         \draw (442.91,110.85) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$p( z,\ \theta _{t-1})$};
+%         }
+%         \onslide<4->{
+%         %Shape: Path Data [id:dp639977105939747] 
+%         \draw  [fill={rgb, 255:red, 94; green, 147; blue, 36 }  ,fill opacity=1 ] (363.9,223.42) .. controls (378.6,243.51) and (398.64,257.52) .. (427.52,258) -- (266.2,257.12) .. controls (307.63,256.14) and (330.18,225.11) .. (345.13,188.95) .. controls (350.31,201.36) and (356.41,213.18) .. (363.9,223.42) -- cycle ;
+%         }
+
+%     \end{tikzpicture}
+
+%     \end{figure}
+% \end{frame}
 
